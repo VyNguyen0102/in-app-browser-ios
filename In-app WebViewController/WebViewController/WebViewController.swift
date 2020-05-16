@@ -117,6 +117,7 @@ class WebViewController: UIViewController {
         self.present(activityViewController, animated: true, completion: nil)
     }
     func closeWithAnimation() {
+        self.webView.stopLoading()
         self.backgroundView.alpha = 0
         self.dismiss(animated: true, completion: nil)
     }
