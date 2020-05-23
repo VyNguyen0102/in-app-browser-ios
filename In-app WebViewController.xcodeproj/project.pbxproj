@@ -15,6 +15,7 @@
 		395150FC243ED967007320E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395150FA243ED967007320E4 /* LaunchScreen.storyboard */; };
 		39515106243EDD1D007320E4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39515104243EDD1D007320E4 /* WebViewController.swift */; };
 		39515107243EDD1D007320E4 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39515105243EDD1D007320E4 /* WebViewController.xib */; };
+		39707935247947BE005F54B6 /* icofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 397079342479476D005F54B6 /* icofont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		395150FD243ED967007320E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39515104243EDD1D007320E4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		39515105243EDD1D007320E4 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		397079342479476D005F54B6 /* icofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icofont.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		39515103243EDBEE007320E4 /* WebViewController */ = {
 			isa = PBXGroup;
 			children = (
+				397079342479476D005F54B6 /* icofont.ttf */,
 				39515104243EDD1D007320E4 /* WebViewController.swift */,
 				39515105243EDD1D007320E4 /* WebViewController.xib */,
 			);
@@ -150,6 +153,7 @@
 			files = (
 				395150FC243ED967007320E4 /* LaunchScreen.storyboard in Resources */,
 				395150F9243ED967007320E4 /* Assets.xcassets in Resources */,
+				39707935247947BE005F54B6 /* icofont.ttf in Resources */,
 				395150F7243ED964007320E4 /* Main.storyboard in Resources */,
 				39515107243EDD1D007320E4 /* WebViewController.xib in Resources */,
 			);

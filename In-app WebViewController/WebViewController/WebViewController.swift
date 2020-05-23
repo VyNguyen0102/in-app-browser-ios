@@ -13,19 +13,49 @@ class WebViewController: UIViewController {
 
     var url: URL? = nil
 
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var dragView: UIView! {
+        didSet {
+            dragView.clipsToBounds = true
+            dragView.layer.cornerRadius = 4
+        }
+    }
+
+    @IBOutlet weak var headerContainerView: UIView! {
+        didSet {
+            headerContainerView.clipsToBounds = true
+            headerContainerView.layer.cornerRadius = 15
+            headerContainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
+    }
+    @IBOutlet weak var closeButton: UIButton! {
+        didSet {
+            self.closeButton.titleLabel?.font = UIFont.init(name: "icofont", size: 22)
+            self.closeButton.setTitle( String(format: "%C", 0xeee4), for: .normal)
+        }
+    }
     @IBOutlet weak var backButton: UIButton! {
         didSet {
+            self.backButton.titleLabel?.font = UIFont.init(name: "icofont", size: 22)
+            self.backButton.setTitle( String(format: "%C", 0xea5c), for: .normal)
+            self.backButton.setTitleColor(UIColor(red:0.839, green:0.854, blue:0.867, alpha:1), for: .disabled)
             self.backButton.addTarget(self.webView, action: #selector(WKWebView.goBack), for: .touchUpInside)
         }
     }
     @IBOutlet weak var siteNameLabel: UILabel!
     @IBOutlet weak var forwardButton: UIButton! {
         didSet {
+            self.forwardButton.titleLabel?.font = UIFont.init(name: "icofont", size: 22)
+            self.forwardButton.setTitle( String(format: "%C", 0xea5d), for: .normal)
+            self.forwardButton.setTitleColor(UIColor(red:0.839, green:0.854, blue:0.867, alpha:1), for: .disabled)
             self.forwardButton.addTarget(self.webView, action: #selector(WKWebView.goForward), for: .touchUpInside)
         }
     }
-    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton! {
+        didSet {
+            self.shareButton.titleLabel?.font = UIFont.init(name: "icofont", size: 22)
+            self.shareButton.setTitle( String(format: "%C", 0xefe5), for: .normal)
+        }
+    }
     @IBOutlet weak var progressView: UIProgressView!
 
     @IBOutlet weak var backgroundView: UIView! {
@@ -137,7 +167,7 @@ extension WebViewController: UIScrollViewDelegate {
                 scrollView.contentOffset.y = 0
             }
             print("main scroll view did scroll scrollViewSync \(scrollViewSync)")
-            backgroundView.alpha = 1 + ( scrollView.contentOffset.y / 100)
+            backgroundView.alpha = 1 + ( scrollView.contentOffset.y / self.view.frame.height)
             if !scrollViewSync {
                 checkScrollViewOffset()
             }
